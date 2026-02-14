@@ -97,58 +97,10 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-#
-#    services.greetd = 
-#      let
-#        swayConfig = pkgs.writeText "greetd-sway-config" ''
-#          # `-l` activates layer-shell mode. Notice that `swaymsg exit` will run after gtkgreet.
-#          exec "${config.programs.regreet.package}/bin/regreet; swaymsg exit"
-#          bindsym Mod4+shift+e exec swaynag \
-#           -t warning \
-#           -m 'What do you want to do?' \
-#           -b 'Poweroff' 'systemctl poweroff' \
-#           -b 'Reboot' 'systemctl reboot'
-#        '';
-#      in
-#      {
-#        enable = true;
-#        settings = {
-#         # initial_session = {
-#         #   command = "${pkgs.swayfx}/bin/sway";
-#         #   user = "a_tree";
-#         # };
-#          default_session = {
-#  	    command = "${pkgs.swayfx}/bin/sway --config ${swayConfig}";
-#          };
-#        };
-#      };
-#  environment.etc."greetd/environments".text = ''
-#    sway
-#    fish
-#    bash
-#    startxfce4
-#  '';
-
   programs.sway.enable = true;
   services.greetd.enable = true;
   programs.regreet.enable = true;
   
- # services.xserver.enable = true;
- # services.xserver.resolutions = [
- #   {x = 1064; y = 800;}
- # ];
- # services.xserver.libinput.enable = true;
- # services.xserver.displayManager.startx.enable = false;
- # services.xserver.autorun = false;
- # services.xserver.displayManager.session = [
- #  { manage = "window";
- #     name = "sway";
- #     start = ''
- #       ${pkgs.swayfx}/bin/sway;
- #     '';
- #   }
- # ];
- # services.seatd.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

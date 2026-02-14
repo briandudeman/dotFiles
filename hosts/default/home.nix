@@ -11,7 +11,7 @@
     enable = true;
     settings = {
       init.defaultBranch = "main";
-      user.mail = "brianjl1944@gmail.com";
+      user.email = "brianjl1944@gmail.com";
       user.name = "briandudeman";
       safe.directory = "/etc/nixos";
     };
@@ -33,7 +33,7 @@
     package = pkgs.swayfx;
     checkConfig = false;
     config = rec {
-      modifier = "Control"; 
+      modifier = "Mod4"; 
       terminal = "kitty";
       startup = [
         {command = "firefox";}
@@ -42,6 +42,9 @@
         let modifier = config.modifier; terminal = config.terminal;
         in lib.mkOptionDefault {
           "${modifier}+Return" = "exec ${terminal}";
+          "${modifier}+q" = "kill";
+          "${modifier}+f" = "exec firefox";  
+          "${modifier}+w" = "exec :";  
       };
     };
 
@@ -59,7 +62,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    vim
+    vim-full
     regreet
     greetd
     kitty
