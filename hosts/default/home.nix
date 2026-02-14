@@ -1,33 +1,50 @@
-{ config, pkgs, ... }:
+{ cfg, lib, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "a_tree";
   home.homeDirectory = "/home/a_tree";
+  
 
   programs.git = {
     enable = true;
-    userName = "briandudeman";
-    userEmail = "brianjl1944@gmail.com";
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";
+      user.mail = "brianjl1944@gmail.com";
+      user.name = "briandudeman";
       safe.directory = "/etc/nixos";
     };
   };
 
-  wayland.windowManager.sway = {
+#  services.greetd = {
+#    enable = true;
+#    settings = rec {
+#      initial_session = {
+#        command = "${pkgs.sway}/bin/sway";
+#        user = "a_tree";
+#      };
+#      default_session = initial_session;
+#    };
+#  };
+
+  wayland.windowManager.sway = rec {
     enable = true;
     package = pkgs.swayfx;
-
     checkConfig = false;
+    config = rec {
+      modifier = "Control"; 
+      terminal = "kitty";
+      startup = [
+        {command = "firefox";}
+      ];
+      keybindings =
+        let modifier = config.modifier; terminal = config.terminal;
+        in lib.mkOptionDefault {
+          "${modifier}+Return" = "exec ${terminal}";
+      };
+    };
 
-    extraConfig = ''
-      shadows enable
-      corner_radius 11
-      blur_radius 7
-      blur_passes 2
-    '';
   };
 
   # This value determines the Home Manager release that your configuration is
@@ -41,7 +58,14 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
+    vim
+    regreet
+    greetd
+    kitty
+    wget
+    firefox
+    
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -95,6 +119,8 @@
     EDITOR = "vim";
   };
 
+  
   # Let Home Manager install and manage itself.
+
   programs.home-manager.enable = true;
 }
