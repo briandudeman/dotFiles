@@ -16,7 +16,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #script test 2
+  #script test 3
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.optimise.automatic = true;
 
