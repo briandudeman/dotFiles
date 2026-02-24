@@ -81,7 +81,11 @@
     git
     firefox
   ];
-  
+
+  stylix.enable = true;
+  stylix.image = ./wallpaper_pink_mountain_1920x1080.jpg;
+
+
   home-manager.useGlobalPkgs = false;
   home-manager.useUserPackages = true;
   security.polkit.enable = true;
