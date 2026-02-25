@@ -51,6 +51,7 @@
   };
 
   stylix = {
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
     enable = true;
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
   };
