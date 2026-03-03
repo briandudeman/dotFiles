@@ -73,10 +73,12 @@
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
   };
 
-  kitty.settings = {
-    background_opacity = 0.5;
-    dynamic_background_opacity = "yes";
-
+  programs.kitty = {
+    enable = true;
+    settings = {
+      background_opacity = 0.5;
+      dynamic_background_opacity = "yes";
+    };
   };
 
   # This value determines the Home Manager release that your configuration is
