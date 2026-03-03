@@ -78,7 +78,7 @@
     settings = {
       dynamic_background_opacity = "yes";
     };
-    extraConfig = "background_opacity 0.5";
+    extraConfig = "background_opacity 0.7";
   };
 
 
