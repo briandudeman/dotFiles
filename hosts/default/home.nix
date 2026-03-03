@@ -76,7 +76,7 @@
   programs.kitty = {
     enable = true;
     settings = {
-      background_opacity = 1;
+      background_opacity = true;
       dynamic_background_opacity = "yes";
     };
   };
