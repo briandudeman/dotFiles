@@ -73,6 +73,12 @@
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
   };
 
+  kitty.settings = {
+    background_opacity = 0.5;
+    dynamic_background_opacity = "yes";
+
+  };
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -87,7 +93,6 @@
   home.packages = with pkgs; [
     vim-full
     regreet
-    greetd
     kitty
     wget
     firefox
