@@ -76,10 +76,11 @@
   programs.kitty = {
     enable = true;
     settings = {
-      background_opacity = "0.5";
       dynamic_background_opacity = "yes";
     };
+    extraConfig = "background_opacity 0.5";
   };
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
