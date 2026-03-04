@@ -35,8 +35,9 @@
     config = rec {
       modifier = "Mod4"; 
       terminal = "kitty";
-      gaps.inner = 5;
-      gaps.outer = 5;
+      gaps.inner = 50;
+      gaps.outer = 50;
+      gaps.left = 30;
       startup = [
         {command = "firefox";}
       ];
