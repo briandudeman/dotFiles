@@ -42,7 +42,6 @@
     config = rec {
       modifier = "Mod4"; 
       terminal = "kitty";
-      corner_radius = 2;
       gaps = {
         inner = 5;
         outer = 5;
@@ -58,6 +57,10 @@
           "${modifier}+f" = "exec firefox";  
           "${modifier}+w" = "exec :";  
       };
+      
+      extraConfig = ''
+        corner_radius 2
+      ''
     };
 
   };
