@@ -58,9 +58,8 @@
   };
 
   wayland.windowManager.sway.config.gaps = {
-    inner = 50;
-    outer = 50;
-    left = 30;
+    inner = 5;
+    outer = 5;
   };  
 
   stylix = {
