@@ -28,12 +28,12 @@
 #    };
 #  };
 
-  wayland.windowManager.sway.config.gaps = {
-    smartGaps = true;
-    inner = 50;
-    outer = 50;
-    left = 30;
-  };  
+
+
+
+
+
+
 
   wayland.windowManager.sway = rec {
     enable = true;
@@ -56,6 +56,13 @@
     };
 
   };
+
+  wayland.windowManager.sway.config.gaps = {
+    smartGaps = true;
+    inner = 50;
+    outer = 50;
+    left = 30;
+  };  
 
   stylix = {
     base16Scheme = {
