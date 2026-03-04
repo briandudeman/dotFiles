@@ -42,6 +42,11 @@
     config = rec {
       modifier = "Mod4"; 
       terminal = "kitty";
+      corner_radius = 2;
+      gaps = {
+        inner = 5;
+        outer = 5;
+      };
       startup = [
         {command = "firefox";}
       ];
@@ -57,10 +62,7 @@
 
   };
 
-  wayland.windowManager.sway.config.gaps = {
-    inner = 5;
-    outer = 5;
-  };  
+    
 
   stylix = {
     base16Scheme = {
