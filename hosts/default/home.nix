@@ -28,6 +28,13 @@
 #    };
 #  };
 
+  wayland.windowManager.sway.config.gaps = {
+    smartGaps = true;
+    inner = 50;
+    outer = 50;
+    left = 30;
+  };  
+
   wayland.windowManager.sway = rec {
     enable = true;
     package = pkgs.swayfx;
@@ -35,12 +42,6 @@
     config = rec {
       modifier = "Mod4"; 
       terminal = "kitty";
-      gaps = {
-        smartGaps = true;
-        inner = 50;
-        outer = 50;
-        left = 30;
-      };  
       startup = [
         {command = "firefox";}
       ];
