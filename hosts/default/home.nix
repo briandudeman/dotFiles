@@ -36,6 +36,7 @@
       modifier = "Mod4"; 
       terminal = "kitty";
       gaps = {
+        smartGaps = true;
         inner = 50;
         outer = 50;
         left = 30;
