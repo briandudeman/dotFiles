@@ -58,10 +58,10 @@
           "${modifier}+w" = "exec :";  
       };
       
-      extraConfig = ''
-        corner_radius 2
-      '';
     };
+    extraConfig = ''
+      corner_radius 2
+    '';
 
   };
 
