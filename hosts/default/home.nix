@@ -60,7 +60,7 @@
       
     };
     extraConfig = ''
-      corner_radius 2
+      corner_radius 4
     '';
 
   };
