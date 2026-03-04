@@ -58,7 +58,6 @@
   };
 
   wayland.windowManager.sway.config.gaps = {
-    smartGaps = true;
     inner = 50;
     outer = 50;
     left = 30;
