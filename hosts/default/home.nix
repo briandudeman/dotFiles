@@ -72,7 +72,7 @@
     base00 = "433434";
     base01 = "3c3836";
     base02 = "504945";
-    base03 = "665c54";
+    base03 = "8F6E6E";
     base04 = "bdae93";
     base05 = "d5c4a1";
     base06 = "ebdbb2";
