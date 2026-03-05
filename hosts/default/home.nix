@@ -69,7 +69,7 @@
 
   stylix = {
     base16Scheme = {
-    base00 = "D2A3A3";
+    base00 = "5F4949";
     base01 = "3c3836";
     base02 = "504945";
     base03 = "665c54";
