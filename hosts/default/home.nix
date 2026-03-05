@@ -82,7 +82,7 @@
     base0A = "fabd2f";
     base0B = "b8bb26";
     base0C = "8ec07c";
-    base0D = "F0C3C3";
+    base0D = "D0A1A1";
     base0E = "d3869b";
     base0F = "d65d0e";
     };
