@@ -88,7 +88,11 @@
     };
     enable = true;
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
-    targets.kitty.enable = true;
+    targets.kitty = {
+      enable = true;
+      colors.enable = true;
+      colors.override = true;
+    };
   };
 
   programs.vim = {
