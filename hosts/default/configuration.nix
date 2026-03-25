@@ -120,10 +120,6 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   
-  programs.vim = {
-    enable = true;
-    package = pkgs.vim-full;
-  };
   programs.sway.enable = true;
   services.greetd.enable = true;
   programs.regreet.enable = true;
