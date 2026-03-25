@@ -67,7 +67,7 @@
 
     
 
-  stylix = {
+  stylix = rec {
     base16Scheme = {
     base00 = "433434";
     base01 = "3c3836";
@@ -91,7 +91,7 @@
     targets.kitty = {
       enable = true;
       colors.enable = true;
-      colors.override = true;
+      colors.override = base16Scheme;
     };
   };
 
