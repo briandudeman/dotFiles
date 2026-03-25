@@ -90,6 +90,11 @@
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
   };
 
+  programs.vim = {
+    enable = true;
+    package = pkgs.vim-full;
+  };
+
   programs.kitty = {
     enable = true;
     settings = {
@@ -111,7 +116,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    vim-full
     regreet
     kitty
     wget
