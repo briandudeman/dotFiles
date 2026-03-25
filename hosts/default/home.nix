@@ -92,6 +92,14 @@
 
   programs.vim = {
     enable = true;
+    settings = {
+      number = true;
+      expandtab = true;
+      autoindent = true;
+      tabstop = 2;
+      softtabstop = 2;
+      shiftwidth = 2;
+    };
   };
 
   programs.kitty = {
