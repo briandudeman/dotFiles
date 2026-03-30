@@ -80,7 +80,7 @@
     base08 = "E685C6";
     base09 = "85C5E6";
     base0A = "fabd2f";
-    base0B = "6D0939";
+    base0B = "C957D6";
     base0C = "8ec07c";
     base0D = "D0A1A1";
     base0E = "d3869b";
