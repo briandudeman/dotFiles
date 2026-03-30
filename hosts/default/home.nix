@@ -77,10 +77,10 @@
     base05 = "d5c4a1";
     base06 = "ebdbb2";
     base07 = "fbf1c7";
-    base08 = "ff0000";
-    base09 = "ff0000";
+    base08 = "E685C6";
+    base09 = "85C5E6";
     base0A = "fabd2f";
-    base0B = "b8bb26";
+    base0B = "6D0939";
     base0C = "8ec07c";
     base0D = "D0A1A1";
     base0E = "d3869b";
