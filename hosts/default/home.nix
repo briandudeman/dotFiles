@@ -78,7 +78,7 @@
     base06 = "ebdbb2";
     base07 = "fbf1c7";
     base08 = "ff0000";
-    base09 = "fe8019";
+    base09 = "ff0000";
     base0A = "fabd2f";
     base0B = "b8bb26";
     base0C = "8ec07c";
