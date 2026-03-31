@@ -74,15 +74,15 @@
     base02 = "504945";
     base03 = "8F6E6E"; # comments, invisibles, line highlighting
     base04 = "bdae93";
-    base05 = "cc9e8e"; # default foreground, caret, delimiters, operators
+    base05 = "dbb9ae"; # default foreground, caret, delimiters, operators
     base06 = "ebdbb2";
     base07 = "fbf1c7";
     base08 = "fcedc1"; # variables, xml tags, markup link text, markup lists, diff deleted
     base09 = "df8f5f"; # integers, boolean, constants, xml attributes, markup link url
     base0A = "9e72b8"; # classes, markup bold, search text background
-    base0B = "b7d5ed"; # strings, inherited class, markup code, diff inserted, +stylix
+    base0B = "b7d5ed"; #  strings, inherited class, markup code, diff inserted, +stylix
     base0C = "8ec07c"; # support, regex, escape characters
-    base0D = "f6cdc6"; # functions, methods, attribute ids, headings
+    base0D = "f6cdc6"; #  functions, methods, attribute ids, headings
     base0E = "d3869b"; # keywords, storage, selector, markup italic, diff changed
     base0F = "d65d0e";
     };
