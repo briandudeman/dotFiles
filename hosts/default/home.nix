@@ -74,7 +74,7 @@
     base02 = "504945";
     base03 = "8F6E6E"; # comments, invisibles, line highlighting
     base04 = "bdae93";
-    base05 = "cebfbb"; # default foreground, caret, delimiters, operators
+    base05 = "94736b"; # default foreground, caret, delimiters, operators
     base06 = "ebdbb2";
     base07 = "fbf1c7";
     base08 = "fcedc1"; # variables, xml tags, markup link text, markup lists, diff deleted
