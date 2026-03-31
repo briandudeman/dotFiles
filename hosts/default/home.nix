@@ -80,7 +80,7 @@
     base08 = "fcedc1"; # variables, xml tags, markup link text, markup lists, diff deleted
     base09 = "df8f5f"; # integers, boolean, constants, xml attributes, markup link url
     base0A = "b7d5ed"; # classes, markup bold, search text background
-    base0B = "b592c8"; # strings, inherited class, markup code, diff inserted, default kitty text with stylix
+    base0B = "cab1d8"; # strings, inherited class, markup code, diff inserted, default kitty text with stylix
     base0C = "8ec07c"; # support, regex, escape characters
     base0D = "f6cdc6"; #  functions, methods, attribute ids, headings
     base0E = "d3869b"; # keywords, storage, selector, markup italic, diff changed
