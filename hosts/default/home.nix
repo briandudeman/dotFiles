@@ -72,18 +72,18 @@
     base00 = "433434";
     base01 = "3c3836";
     base02 = "504945";
-    base03 = "8F6E6E";
+    base03 = "8F6E6E"; # commends, invisibles, line highlighting
     base04 = "bdae93";
-    base05 = "d5c4a1";
+    base05 = "d5c4a1"; # default foreground, caret, delimiters, operators
     base06 = "ebdbb2";
     base07 = "fbf1c7";
-    base08 = "E685C6";
-    base09 = "85C5E6";
-    base0A = "fabd2f";
-    base0B = "F2AED9";
-    base0C = "8ec07c";
-    base0D = "D0A1A1";
-    base0E = "d3869b";
+    base08 = "fcedc1"; # variables, xml tags, markup link text, markup lists, diff deleted
+    base09 = "daa075"; # integers, boolean, constants, xml attributes, markup link url
+    base0A = "ae7f94"; # classes, markup bold, search text background
+    base0B = "f6cdc6"; # strings, inherited class, markup code, diff inserted, +stylix
+    base0C = "8ec07c"; # support, regex, escape characters
+    base0D = "a6bdb5"; # functions, methods, attribute ids, headings
+    base0E = "d3869b"; # keywords, storage, selector, markup italic, diff changed
     base0F = "d65d0e";
     };
     enable = true;
