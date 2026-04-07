@@ -32,6 +32,10 @@
 
 
 
+  programs.waybar = {
+    enable = true;
+
+  };
 
 
 
