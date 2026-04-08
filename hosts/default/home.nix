@@ -34,6 +34,12 @@
 
   programs.waybar = {
     enable = true;
+    style = ''
+      * {
+          border: solid;
+          border-radius: 5;
+        }
+    '';
     settings = {
       mainBar = {
         layer = "top";
