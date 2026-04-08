@@ -92,6 +92,9 @@
     };
     extraConfig = ''
       corner_radius 4
+      bar {
+        swaybar_command waybar
+      }
     '';
 
   };
