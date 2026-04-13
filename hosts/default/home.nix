@@ -22,6 +22,11 @@
     profiles = {
       a_tree = {
         isDefault = true;
+        seardh = {
+          force = true;
+          privateDefault = "DuckDuckGo";
+          default = "DuckDuckgo";
+        };
         #extensions = {
         #  packages = with pkgs.nur.repos.rycee.firefox-addons; [
         #    ublock-origin
