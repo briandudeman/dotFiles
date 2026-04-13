@@ -98,9 +98,9 @@
         inner = 5;
         #outer = 5;
       };
-      startup = [
-        {command = "firefox";}
-      ];
+      #startup = [
+      #  {command = "firefox";}
+      #];
       keybindings =
         let modifier = config.modifier; terminal = config.terminal;
         in lib.mkOptionDefault {
