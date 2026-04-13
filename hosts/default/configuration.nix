@@ -20,6 +20,14 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.optimise.automatic = true;
 
+  # saved config garbage collection
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 7d";
+  };
+
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
