@@ -17,18 +17,26 @@
     };
   };
 
-#  services.greetd = {
-#    enable = true;
-#    settings = rec {
-#      initial_session = {
-#        command = "${pkgs.sway}/bin/sway";
-#        user = "a_tree";
-#      };
-#      default_session = initial_session;
-#    };
-#  };
-
-
+  programs.firefox = {
+    enable = true;
+    profiles = {
+      a_tree = {
+        extensions = {
+        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+        ];
+        settings."uBlock0@raymondhill.net".settings = {
+          selectedFilterLists = [
+            "ublock-filters"
+            "ublock-badware"
+            "ublock-privacy"
+            "ublock-unbreak"
+            "ublock-quick-fixes"
+          ];
+        };
+      };
+    };
+  };
 
 
 
@@ -132,6 +140,7 @@
     # programs changed by stylix
     targets.firefox = {
       enable = true;
+      profileNames = [ "a_tree" ];
       colors.enable = true;
       colors.override = base16Scheme;
     };
