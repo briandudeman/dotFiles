@@ -21,7 +21,7 @@
     enable = true;
     profiles = {
       a_tree = {
-        extensions = {};
+        isDefault = true;
         #extensions = {
         #  packages = with pkgs.nur.repos.rycee.firefox-addons; [
         #    ublock-origin
