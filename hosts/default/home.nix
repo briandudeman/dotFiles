@@ -128,6 +128,13 @@
     };
     enable = true;
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
+
+    # programs changed by stylix
+    targets.firefox = {
+      enable = true;
+      colors.enable = true;
+      colors.override = base16Scheme;
+    };
     targets.kitty = {
       enable = true;
       colors.enable = true;
