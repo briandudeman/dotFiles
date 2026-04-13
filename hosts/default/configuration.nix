@@ -24,7 +24,8 @@
   nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
-    options = "--delete-older-than 7d";
+    dates = "daily";
+    options = "--delete-older-than +4";
   };
 
 
