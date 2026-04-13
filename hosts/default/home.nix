@@ -22,7 +22,7 @@
     profiles = {
       a_tree = {
         isDefault = true;
-        seardh = {
+        search = {
           force = true;
           privateDefault = "DuckDuckGo";
           default = "DuckDuckgo";
