@@ -98,9 +98,9 @@
         inner = 5;
         #outer = 5;
       };
-      #startup = [
-      #  {command = "firefox";}
-      #];
+      startup = [
+        {command = "firefox";}
+      ];
       keybindings =
         let modifier = config.modifier; terminal = config.terminal;
         in lib.mkOptionDefault {
@@ -147,7 +147,7 @@
     # programs changed by stylix
     targets.firefox = {
       enable = true;
-      profileNames = [ "a_tree" ];
+      #profileNames = [ "a_tree" ];
       colors.enable = true;
       colors.override = base16Scheme;
     };
