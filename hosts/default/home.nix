@@ -6,7 +6,7 @@
   home.username = "a_tree";
   home.homeDirectory = "/home/a_tree";
   
-
+# push test
   programs.git = {
     enable = true;
     settings = {
