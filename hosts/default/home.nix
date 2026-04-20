@@ -147,7 +147,7 @@
     # programs changed by stylix
     targets.firefox = {
       enable = true;
-      #profileNames = [ "a_tree" ];
+      profileNames = [ "a_tree" ];
       colors.enable = true;
       colors.override = base16Scheme;
     };
