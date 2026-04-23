@@ -111,7 +111,7 @@
           "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+q" = "kill";
           "${modifier}+f" = "exec firefox";  
-          "${modifier} --release" = "exec wofi --show drun";  
+          "--release ${modifier}" = "exec wofi --show drun";  
       };
       
     };
