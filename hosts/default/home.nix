@@ -111,7 +111,7 @@
           "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+q" = "kill";
           "${modifier}+f" = "exec firefox";  
-          "--release Super_L" = "exec kitty --hold 'echo thing'";
+          "--release Super_L" = "exec kitty --hold ls";
           #"--release Super_L" = "exec 'swaymsg [app_id=kitty] focus || exec wofi --show drun'";  
       };
       
