@@ -111,7 +111,7 @@
           "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+q" = "kill";
           "${modifier}+f" = "exec firefox";  
-          "--release Super_L" = "if [ $(swaymsg -t get_tree | grep -c 'wofi') -eq 0 ]; then exec wofi --show drun; else swaymsg '[app_id=wofi] kill'; fi";  
+          "--release Super_L" = "swaymsg [app_id='wofi'] focus || exec wofi --show drun";  
       };
       
     };
