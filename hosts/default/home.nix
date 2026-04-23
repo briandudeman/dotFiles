@@ -111,7 +111,7 @@
           "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+q" = "kill";
           "${modifier}+f" = "exec firefox";  
-          "--release Super_L" = "exec bash '/etc/nixos/menu_toggle.sh'";
+          "--release Super_L" = "pkill wofi || exec wofi --show drun";
           #"--release Super_L" = "exec 'swaymsg [app_id=kitty] focus || exec wofi --show drun'";  
       };
       
