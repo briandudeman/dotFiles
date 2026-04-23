@@ -17,6 +17,10 @@
     };
   };
 
+  programs.wofi = {
+    enable = true;
+  };
+
   programs.firefox = {
     enable = true;
     profiles = {
