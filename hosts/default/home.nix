@@ -111,7 +111,7 @@
           "${modifier}+Return" = "exec ${terminal}";
           "${modifier}+q" = "kill";
           "${modifier}+f" = "exec firefox";  
-          "--release Super_L" = "$swaymsg [app_id='wofi'] focus || exec wofi --show drun";  
+          "--release Super_L" = "swaymsg [app_id='kitty'] focus || exec wofi --show drun";  
       };
       
     };
