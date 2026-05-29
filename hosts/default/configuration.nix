@@ -46,7 +46,7 @@
   #
   # Audio
   #
-  software.pulseaudio.enable = false; # Use Pipewire, the modern sound subsystem
+  #software.pulseaudio.enable = false; # Use Pipewire, the modern sound subsystem
 
   security.rtkit.enable = true; # Enable RealtimeKit for audio purposes
 
