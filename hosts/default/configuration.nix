@@ -32,18 +32,18 @@
 
   systemd = {
     timers.backup = {
-      description = "Backup timer";
+      description = "downloader";
       wantedBy = [ "timers.target" ];
       partOf = [ "backup.service" ];
-      timerConfig.OnCalendar = "12:00";
+      timerConfig.OnCalendar = "22:52";
       timerConfig.Persistent="true";
     };
     services.backup = {
-      description = "make backup";
+      description = "run downloader";
       path = with pkgs; [ bash rsync openssh ];
       serviceConfig.Type = "simple";
       script = ''
-      bash /home/bla/backup.sh
+      bash /home/a_tree/runner.sh
       '';
     };
   };
