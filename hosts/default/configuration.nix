@@ -33,9 +33,9 @@
   systemd = {
     timers.backup = {
       description = "downloader";
-      wantedBy = [ "timers.target" ];
+      wantedBy = [ "deafault.target" ];
       partOf = [ "backup.service" ];
-      timerConfig.OnCalendar = "22:52";
+      timerConfig.OnCalendar = "23:00:00";
       timerConfig.Persistent="true";
     };
     services.backup = {
