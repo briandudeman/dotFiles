@@ -28,26 +28,23 @@
   };
 
 
-  systemd = {
-    timers.backup = {
-      description = "downloader";
-      wantedBy = [ "multi-user.target" ];
-      
-      #partOf = [ "backup.service" ];
-      timerConfig.Unit = "backup.service";
-      timerConfig.OnCalendar = "23:25:00";
-      timerConfig.Persistent="true";
-    };
-    services.backup = {
-      enable = true;
-      description = "run downloader";
-      wantedBy = [ "multi-user.target" ];
-      path = with pkgs; [ bash rsync openssh ];
-      serviceConfig.Type = "oneshot";
-      script = "bash /home/a_tree/runner.sh";
+  systemd.services."backups" = {
+  path = [ pkgs.nix ];
+    script = "/home/a_tree/runner.sh";
+    serviceConfig = {
+      Type = "oneshot";
+      User = "a_tree";
     };
   };
-
+  systemd.timers."backups" = {
+    timerConfig = {
+      OnActiveSec = "1s";
+      OnUnitActiveSec = "1m";
+      Persistent=true;
+      Unit = "backups.service";
+    };
+    wantedBy = [ "timers.target" ];
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -129,8 +126,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
-    procps
     pavucontrol
     #firefox
   ];
@@ -193,5 +188,7 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
