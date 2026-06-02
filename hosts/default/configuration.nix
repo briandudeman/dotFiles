@@ -35,7 +35,7 @@
       description = "downloader";
       wantedBy = [ "multi-user.target" ];
       partOf = [ "backup.service" ];
-      timerConfig.OnCalendar = "23:14:00";
+      timerConfig.OnCalendar = "23:18:00";
       timerConfig.Persistent="true";
     };
     services.backup = {
@@ -43,7 +43,7 @@
       description = "run downloader";
       wantedBy = [ "multi-user.target" ];
       path = with pkgs; [ bash rsync openssh ];
-      serviceConfig.Type = "simple";
+      serviceConfig.Type = "oneshot";
       script = ''
       bash /home/a_tree/runner.sh
       '';
