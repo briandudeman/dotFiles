@@ -35,7 +35,7 @@
       description = "downloader";
       wantedBy = [ "multi-user.target" ];
       partOf = [ "backup.service" ];
-      timerConfig.OnCalendar = "23:10:00";
+      timerConfig.OnCalendar = "23:14:00";
       timerConfig.Persistent="true";
     };
     services.backup = {
