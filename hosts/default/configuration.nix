@@ -37,7 +37,7 @@
       
       #partOf = [ "backup.service" ];
       timerConfig.Unit = "backup.service";
-      timerConfig.OnCalendar = "23:22:00";
+      timerConfig.OnCalendar = "23:25:00";
       timerConfig.Persistent="true";
     };
     services.backup = {
@@ -46,9 +46,7 @@
       wantedBy = [ "multi-user.target" ];
       path = with pkgs; [ bash rsync openssh ];
       serviceConfig.Type = "oneshot";
-      script = ''
-      bash /home/a_tree/runner.sh
-      '';
+      script = "bash /home/a_tree/runner.sh";
     };
   };
 
