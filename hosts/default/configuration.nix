@@ -34,8 +34,10 @@
     timers.backup = {
       description = "downloader";
       wantedBy = [ "multi-user.target" ];
-      partOf = [ "backup.service" ];
-      timerConfig.OnCalendar = "23:18:00";
+      
+      #partOf = [ "backup.service" ];
+      timerConfig.Unit = "backup.service";
+      timerConfig.OnCalendar = "23:22:00";
       timerConfig.Persistent="true";
     };
     services.backup = {
