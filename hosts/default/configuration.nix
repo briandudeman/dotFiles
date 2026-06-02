@@ -30,6 +30,25 @@
   };
 
 
+  systemd = {
+    timers.backup = {
+      description = "Backup timer";
+      wantedBy = [ "timers.target" ];
+      partOf = [ "backup.service" ];
+      timerConfig.OnCalendar = "12:00";
+      timerConfig.Persistent="true";
+    };
+    services.backup = {
+      description = "make backup";
+      path = with pkgs; [ bash rsync openssh ];
+      serviceConfig.Type = "simple";
+      script = ''
+      bash /home/bla/backup.sh
+      '';
+    };
+  };
+
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
