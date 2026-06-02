@@ -33,7 +33,7 @@
   systemd = {
     timers.backup = {
       description = "downloader";
-      wantedBy = [ "deafault.target" ];
+      wantedBy = [ "multi-user.target" ];
       partOf = [ "backup.service" ];
       timerConfig.OnCalendar = "23:00:00";
       timerConfig.Persistent="true";
@@ -41,6 +41,7 @@
     services.backup = {
       enable = true;
       description = "run downloader";
+      wantedBy = [ "multi-user.target" ];
       path = with pkgs; [ bash rsync openssh ];
       serviceConfig.Type = "simple";
       script = ''
