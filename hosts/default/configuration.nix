@@ -39,6 +39,7 @@
       timerConfig.Persistent="true";
     };
     services.backup = {
+      enable = true;
       description = "run downloader";
       path = with pkgs; [ bash rsync openssh ];
       serviceConfig.Type = "simple";
