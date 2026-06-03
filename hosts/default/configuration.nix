@@ -32,7 +32,7 @@
     script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
-      User = "a_tree";
+      User = "root";
     };
   };
   systemd.timers."backups" = {
