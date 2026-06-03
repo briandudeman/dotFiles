@@ -41,6 +41,10 @@
   # Set your time zone.
   time.timeZone = "America/New_York";
 
+  stylix.enable = true;
+  stylix.image = ./wallpaper_pink_mountain_1920x1080.jpg
+  
+
   #
   # Audio
   #
