@@ -147,7 +147,6 @@
     base0E = "d3869b"; # keywords, storage, selector, markup italic, diff changed
     base0F = "d65d0e";
     };
-    enable = true;
     image = ./wallpaper_pink_mountain_1920x1080.jpg;
 
     # programs changed by stylix
