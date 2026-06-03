@@ -128,6 +128,7 @@
     
 
   stylix = rec {
+    enable = true;
     base16Scheme = {
     base00 = "433434";
     base01 = "3c3836";

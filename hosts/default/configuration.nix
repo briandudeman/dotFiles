@@ -28,23 +28,6 @@
   };
 
 
-  systemd.services."backups" = {
-  path = [ pkgs.nix ];
-    script = "/home/user/run_backup.sh";
-    serviceConfig = {
-      Type = "oneshot";
-      User = "user";
-    };
-  };
-  systemd.timers."backups" = {
-    timerConfig = {
-      OnUnitActiveSec = "12h";
-      Persistent=true;
-      Unit = "backups.service";
-    };
-    wantedBy = [ "timers.target" ];
-  };
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -103,7 +86,6 @@
     variant = "";
   };
 
-  stylix.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.a_tree = {
     isNormalUser = true;
@@ -124,21 +106,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; {
-    base03 = "665c54";
-    base04 = "bdae93";
-    base05 = "ffffff";
-    base06 = "ebdbb2";
-    base07 = "fbf1c7";
-    base08 = "fb4934";
-    base09 = "fe8019";
-    base0A = "fabd2f";
-    base0B = "b8bb26";
-    base0C = "8ec07c";
-    base0D = "ff2900";
-    base0E = "d3869b";
-    base0F = "d65d0e";
-  };
 
   home-manager.useGlobalPkgs = false;
   home-manager.useUserPackages = true;
