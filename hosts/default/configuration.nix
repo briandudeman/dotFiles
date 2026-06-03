@@ -29,7 +29,7 @@
 
   systemd.services."backups" = {
   path = [ pkgs.nix ];
-    script = "/home/a_tree/runner.sh";
+    script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
       User = "user";
