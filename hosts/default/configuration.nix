@@ -29,7 +29,7 @@
 
 
   systemd.services."backups" = {
-  path = [ pkgs.nix ];
+    path = [ pkgs.nix ];
     script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
@@ -45,6 +45,7 @@
     };
     wantedBy = [ "timers.target" ];
   };
+};
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
