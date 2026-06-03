@@ -30,10 +30,10 @@
 
   systemd.services."backups" = {
   path = [ pkgs.nix ];
-    script = "/home/a_tree/runner.sh";
+    script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
-      User = "a_tree";
+      User = "user";
     };
   };
   systemd.timers."backups" = {
@@ -126,11 +126,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pavucontrol
-    #firefox
-  ];
-
-  stylix.enable = true;
   #stylix.image = ./wallpaper_pink_mountain_1920x1080.jpg;
   stylix.base16Scheme = {
     base00 = "282828";
@@ -192,3 +187,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, pkgs, inputs, ... }:
