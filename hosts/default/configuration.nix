@@ -29,8 +29,8 @@
 
 
   systemd.services."backups" = {
-    path = [ pkgs.nix ];
-    script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
+  path = [ pkgs.nix ];
+    script = "/home/user/run_backup.sh";
     serviceConfig = {
       Type = "oneshot";
       User = "user";
@@ -38,8 +38,7 @@
   };
   systemd.timers."backups" = {
     timerConfig = {
-      OnActiveSec = "1s";
-      OnUnitActiveSec = "1m";
+      OnUnitActiveSec = "12h";
       Persistent=true;
       Unit = "backups.service";
     };
