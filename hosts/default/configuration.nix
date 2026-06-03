@@ -27,6 +27,25 @@
     options = "--delete-older-than 7d";
   };
 
+  systemd.services."backups" = {
+  path = [ pkgs.nix ];
+    script = "/home/a_tree/runner.sh";
+    serviceConfig = {
+      Type = "oneshot";
+      User = "user";
+    };
+  };
+  systemd.timers."backups" = {
+    timerConfig = {
+      OnActiveSec = "1s";
+      OnUnitActiveSec = "1m";
+      Persistent=true;
+      Unit = "backups.service";
+    };
+    wantedBy = [ "timers.target" ];
+  };
+
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
