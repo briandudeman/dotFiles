@@ -126,11 +126,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #stylix.image = ./wallpaper_pink_mountain_1920x1080.jpg;
-  stylix.base16Scheme = {
-    base00 = "282828";
-    base01 = "3c3836";
-    base02 = "504945";
     base03 = "665c54";
     base04 = "bdae93";
     base05 = "ffffff";
@@ -187,6 +182,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, pkgs, inputs, ... }:
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
