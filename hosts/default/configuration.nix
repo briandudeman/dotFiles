@@ -115,7 +115,7 @@
     description = "Brian LewConklin";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    openssh.authorizedKeys.keys [
+    openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKkb1wZiV5YN+aS41GqNwBjAloJisdq2nxT0SPv136kg a_tree@nixos"
     ];
   };
