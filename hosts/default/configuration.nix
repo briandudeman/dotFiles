@@ -148,9 +148,10 @@
   programs.ssh = {
     extraConfig = "
       Host grandview
-      Hostname 192.168.1.70
-      Port 22
-      User a_tree
+        Hostname 192.168.1.70
+        Port 22
+        IdentityFile /home/a_tree/CliveNetKey
+        IdentitiesOnly yes    
     ";
   };
 
