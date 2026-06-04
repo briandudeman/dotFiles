@@ -145,6 +145,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
+  programs.ssh.startAgent = true;
   programs.ssh = {
     extraConfig = "
       AddKeysToAgent yes
