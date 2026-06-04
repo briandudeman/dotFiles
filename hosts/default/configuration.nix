@@ -145,8 +145,15 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-  
+  programs.ssh = {
+    extraConfig = "
+      Host grandview
+      Hostname 192.168.1.70
+      Port 22
+      User a_tree
+    ";
+  };
+
   programs.sway.enable = true;
   services.greetd.enable = true;
   programs.regreet.enable = true;
