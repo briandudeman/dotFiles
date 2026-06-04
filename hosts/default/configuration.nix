@@ -148,14 +148,14 @@
   programs.ssh.startAgent = true;
   programs.ssh = {
     extraConfig = "
-      AddKeysToAgent yes
+      #AddKeysToAgent yes
 
       Host grandview
         Hostname 192.168.1.70
         Port 22
-        IdentityFile /home/a_tree/.ssh/CliveNetKey
-        IdentitiesOnly yes    
-        ForwardAgent yes
+        #IdentityFile /home/a_tree/.ssh/CliveNetKey
+        #IdentitiesOnly yes    
+        #ForwardAgent yes
     ";
   };
 
