@@ -147,6 +147,8 @@
   # Enable the OpenSSH daemon.
   programs.ssh = {
     extraConfig = "
+      AddKeysToAgent yes
+
       Host grandview
         Hostname 192.168.1.70
         Port 22
