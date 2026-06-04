@@ -115,6 +115,9 @@
     description = "Brian LewConklin";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    openssh.authorizedKeys.keys [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKkb1wZiV5YN+aS41GqNwBjAloJisdq2nxT0SPv136kg a_tree@nixos"
+    ];
   };
 
   home-manager = {
@@ -148,14 +151,13 @@
   programs.ssh.startAgent = true;
   programs.ssh = {
     extraConfig = "
-      #AddKeysToAgent yes
 
       Host grandview
         Hostname 192.168.1.70
         Port 22
-        #IdentityFile /home/a_tree/.ssh/CliveNetKey
-        #IdentitiesOnly yes    
-        #ForwardAgent yes
+        IdentityFile /home/a_tree/.ssh/CliveNetKey
+        IdentitiesOnly yes    
+        PasswordAuthentication yes    
     ";
   };
 
