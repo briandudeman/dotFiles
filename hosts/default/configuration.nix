@@ -153,7 +153,7 @@
       Host grandview
         Hostname 192.168.1.70
         Port 22
-        IdentityFile /home/a_tree/CliveNetKey
+        IdentityFile /home/a_tree/.ssh/CliveNetKey
         IdentitiesOnly yes    
         ForwardAgent yes
     ";
