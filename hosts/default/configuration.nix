@@ -154,6 +154,7 @@
         Port 22
         IdentityFile /home/a_tree/CliveNetKey
         IdentitiesOnly yes    
+        ForwardAgent yes
     ";
   };
 
