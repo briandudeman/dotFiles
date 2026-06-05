@@ -164,7 +164,8 @@
   programs.sway.enable = true;
   services.greetd.enable = true;
   programs.regreet.enable = true;
-  #services.pipewire.enable = true;  
+  services.pipewire.enable = true;  
+  software.pulseaudio.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
