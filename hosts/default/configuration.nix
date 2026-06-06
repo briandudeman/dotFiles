@@ -27,24 +27,24 @@
     options = "--delete-older-than 7d";
   };
 
-  systemd.services."backups" = {
+  systemd.services."torrenter" = {
   path = [ pkgs.nix ];
     script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
+      User = "user";
     };
   };
-  systemd.timers."backups" = {
+  systemd.timers."torrenter" = {
     timerConfig = {
       OnCalendar="10:38:30";
       Persistent=true;
-      Unit = "backups.service";
+      Unit = "torrenter.service";
     };
     wantedBy = [ "timers.target" ];
   };
 
-
+  
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -113,7 +113,7 @@
     isNormalUser = true;
     description = "Brian LewConklin";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ transmission_4-qt ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKkb1wZiV5YN+aS41GqNwBjAloJisdq2nxT0SPv136kg a_tree@nixos"
     ];
