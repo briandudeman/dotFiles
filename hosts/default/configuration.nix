@@ -37,7 +37,7 @@
   };
   systemd.timers."torrenter" = {
     timerConfig = {
-      OnCalendar="10:38:30";
+      OnCalendar="11:33:30";
       Persistent=true;
       Unit = "torrenter.service";
     };
