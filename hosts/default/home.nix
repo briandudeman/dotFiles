@@ -28,8 +28,8 @@
         isDefault = true;
         search = {
           force = true;
-          privateDefault = "DuckDuckGo";
-          default = "DuckDuckgo";
+          privateDefault = "ddg";
+          default = "ddg";
         };
         #extensions = {
         #  packages = with pkgs.nur.repos.rycee.firefox-addons; [
