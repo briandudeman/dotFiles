@@ -32,7 +32,7 @@
     script = "${pkgs.bash}/bin/bash /home/a_tree/runner.sh";
     serviceConfig = {
       Type = "oneshot";
-      User = "user";
+      User = "a_tree";
     };
   };
   systemd.timers."torrenter" = {
@@ -45,7 +45,8 @@
   };
 
   services.transmission.settings = {
-    download-dir = "${config.services.transmission.home}/Downloads";
+    #enable = true;
+    #download-dir = "${config.services.transmission.home}/Downloads";
   };
 
   networking.hostName = "nixos"; # Define your hostname.
