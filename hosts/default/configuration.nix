@@ -44,7 +44,9 @@
     wantedBy = [ "timers.target" ];
   };
 
-  
+  services.transmission.settings = {
+    download-dir = "${config.services.transmission.home}/Downloads";
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
