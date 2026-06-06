@@ -37,8 +37,7 @@
   };
   systemd.timers."backups" = {
     timerConfig = {
-      OnActiveSec = "1s";
-      OnUnitActiveSec = "1m";
+      OnCalendar="10:38:30";
       Persistent=true;
       Unit = "backups.service";
     };
@@ -151,6 +150,7 @@
   programs.ssh.startAgent = true;
   programs.ssh = {
     extraConfig = "
+      AddKeysToAgent yes  
 
       Host grandview
         Hostname 192.168.1.70
