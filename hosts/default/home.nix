@@ -197,7 +197,7 @@
   home.packages = with pkgs; [
     regreet
     kitty
-    proton-vpn
+    protonvpn-gui
     wget
     firefox
     wofi
