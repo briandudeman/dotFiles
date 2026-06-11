@@ -45,8 +45,8 @@
   };
 
   services.transmission.settings = {
-    #enable = true;
-    #download-dir = "${config.services.transmission.home}/Downloads";
+    enable = true;
+    download-dir = "${config.services.transmission.home}/Downloads";
   };
 
   networking.hostName = "nixos"; # Define your hostname.
